@@ -1,0 +1,52 @@
+﻿
+<div class="modal-header" id="input">
+    <button type="button" class="close" ng-click="vm.cancel()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">
+        <span>Agencia - {{action}}</span>
+    </h4>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label class="control-label ">Codigo</label>
+        <input id="Codigo" autofocus class="form-control" type="text" ng-model="vm.data.codigo" ng-disabled="vm.enabled">
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Nombre</label>
+        <input id="Nombre" autofocus class="form-control" type="text" ng-model="vm.data.nombre" ng-disabled="vm.enabled" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Direccion</label>
+        <input id="Direccion" autofocus class="form-control" type="text" ng-model="vm.data.direccion" ng-disabled="vm.enabled" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Telefono</label>
+        <input id="Telefono" autofocus class="form-control" type="text" ng-model="vm.data.telefono" ng-disabled="vm.enabled" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Status Registro </label>
+        <select style="width: 70%;" id="SelectorStatus" ng-options="Descripcion.valor as Descripcion.descripcion for Descripcion in vm.descripcionesStatus" ng-model="vm.data.statusRegistro" ng-disabled="vm.enabled"></select>
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Comision Por</label>
+        <select style="width: 70%;" id="SelectorComisionPor" ng-options="Descripcion.valor as Descripcion.descripcion for Descripcion in vm.descripcionesComisionPor" ng-model="vm.data.comisionPor" ng-disabled="vm.enabled"></select>
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Porcentaje Por Premio</label>
+        <input id="PorcentajePorPremio" autofocus class="form-control" type="text" ng-model="vm.data.porcentajePorPremio" ng-disabled="vm.enabled" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">Comentario</label>
+        <input id="Comentario" autofocus class="form-control" type="text" ng-model="vm.data.comentario" ng-disabled="vm.enabled" />
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default waves-effect" ng-click="vm.cancel()">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-primary waves-effect" ng-click="vm.save()">
+        Guardar
+    </button>
+</div>
